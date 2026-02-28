@@ -245,7 +245,7 @@ export default function Dashboard() {
 
       {/* ── HEADER ── */}
       <div>
-        <h1 className="text-2xl font-black text-white">Good morning.</h1>
+        <h1 className="text-2xl font-black text-white">{(() => { const h = new Date().getHours(); return h < 12 ? "Good morning" : h < 17 ? "Good afternoon" : "Good evening"; })()}.</h1>
         <div className="mt-1 flex items-center gap-3 flex-wrap">
           <LiveClock />
           <span className="text-slate-600">·</span>
